@@ -1,0 +1,76 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+  namespace: app-ns
+  labels:
+      app: my-app
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+        app.kubernetes.io/name: my-app
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: my-app
+    spec:
+      containers:
+        - name: my-app
+          image: container.io
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8000
+      imagePullSecrets:
+        - name: github-secret
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: port-service
+  namespace: app-ns
+spec:
+  selector:
+    app.kubernetes.io/name: my-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: NodePort
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: app-ns
+  name: my-app-ingress
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:account:certificate/certificatenumber
+    alb.ingress.kubernetes.io/listen-ports: "[{'HTTP': 80}, {'HTTPS': 443}]"
+    alb.ingress.kubernetes.io/ssl-redirect: '443'
+    alb.ingress.kubernetes.io/auth-idp-oidc: '{"issuer": "https://auth0.com","authorizationEndpoint": "https://auth.auth0.com.oauth2","tokenEndpoint": "https://auth0.com/token.oauth2","userInfoEndpoint": "https://autho0com/idp/userinfo.openid","secretName": "app-secret"}'
+    alb.ingress.kubernetes.io/auth-on-unauthenticated-request: authenticate
+    alb.ingress.kubernetes.io/auth-scope: 'openid profile'
+    alb.ingress.kubernetes.io/auth-session-cookie: AWSELBSessionCookie
+    alb.ingress.kubernetes.io/auth-session-timeout: '3600'
+    alb.ingress.kubernetes.io/auth-type: oidc
+    alb.ingress.kubernetes.io/healthcheck-protocol: HTTP
+    alb.ingress.kubernetes.io/healthceck-port: '80'
+    alb.ingress.kubernetes.io/healthcheck-path: /healthcheck
+spec:
+  ingressClassName: alb
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: port-service
+                port:
+                  number: 80
