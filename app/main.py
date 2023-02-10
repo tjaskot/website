@@ -14,6 +14,7 @@ app = FastAPI(
     version="1.0"
 )
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
+app.mount("/webfonts", StaticFiles(directory="app/static/webfonts"), name="webfonts")
 templates = Jinja2Templates(directory="app/templates")
 favicon_path = 'favicon.ico'
 
