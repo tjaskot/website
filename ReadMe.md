@@ -1,4 +1,4 @@
-# Trevor's Personal Website
+# tjaskot's Personal Website
 
 ## Tech Stack
 
