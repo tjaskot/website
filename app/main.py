@@ -67,6 +67,25 @@ async def home(blog_request: Request):
     return templates.TemplateResponse("blog.html", {"request": blog_request})
 
 
+@app.get("/business", response_class=HTMLResponse)
+async def home(business_request: Request):
+    """
+    Business page for inquiries and potential collaboration opportunities.
+    :return:
+    """
+    return templates.TemplateResponse("business.html", {"request": business_request})
+
+
+@app.get("/askaquestion", response_class=HTMLResponse)
+async def home(askaquestion_request: Request):
+    """
+    Ask A Question page for topics, discussions, billboards, thoughts, education, guidance, and
+    anything else which comes to mind.
+    :return:
+    """
+    return templates.TemplateResponse("askaquestion.html", {"request": askaquestion_request})
+
+
 @app.api_route("/api", methods=["GET", "POST"])
 async def api_test(api_test: Request):
     """
