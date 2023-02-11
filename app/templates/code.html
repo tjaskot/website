@@ -10,9 +10,69 @@
 
 {% block body %}
     {{ super() }}
-    <div class="container-lg pt-3 pb-3 bkgd">
-        <h2 class="txt-cntr">Code Page</h2>
-        <p>Code paragraph</p>
+    <div class="row pt-3 pb-3 code-parallax parallax-top">
+        <h1 class="txt-cntr">Code</h1>
+        <h5 class="fst-italic text-center">
+            You might not think programmers are artists,<br>but programming is an extremely creative profession.<br>
+            It's logic-based creativity - John Romero
+        </h5>
+    </div>
+    <div class="container-lg pt-3 pb-2 bkgd">
+        <hr class="border border-primary border-3 opacity-75">
+        <div class="container-md p-2">
+            <div id="carouselCode" class="carousel slide carousel-bkgd">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselCode" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselCode" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ url_for('static', path='images/github.png') }}" class="d-block w-25">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>GitHub</h5>
+                            <p>Link to TJ's Personal GitHub account with all current active projects.</p>
+                            <a href="https://github.com/tjaskot" rel="noreferrer noopener" target="_blank">
+                                GitHub Repos
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', path='images/linkedin.png') }}" class="d-block w-25">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>LinkedIn</h5>
+                            <p>
+                                TJ's LinkedIn profile which includes current experience, previous experience,
+                                coding skills, certifications, and business opportunities.
+                            </p>
+                            <a href="https://www.linkedin.com/in/trevor-jaskot-72597a204/" rel="noreferrer noopener"
+                                target="_blank">
+                                LinkedIn Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCode"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCode"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <hr class="border border-primary border-3 opacity-75">
+    </div>
+    <div class="row code-parallax parallax-center"></div>
+    <div class="container-lg pt-3 pb-2 bkgd">
+        <hr class="border border-primary border-3 opacity-75">
+        <div class="container-md p-2">
+        </div>
+        <hr class="border border-primary border-3 opacity-75">
     </div>
 {% endblock %}
 
