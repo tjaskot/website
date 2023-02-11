@@ -12,13 +12,12 @@
         <link rel="stylesheet" href="{{ url_for('static', path='css/common.css') }}" />
     {% endblock %}
 
-    {% block header %}
-    {% endblock %}
-
     {% block navbar %}
         <nav class="navbar navbar-expand-lg bg-primary-subtle sticky-top">
           <div class="container-fluid">
-            <i class="fa fa-sharp fa-bolt fa-2x"></i>
+            <div class="ps-1 pe-3">
+              <i class="fa fa-thin fa-bolt fa-2x"></i>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -29,9 +28,9 @@
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/contact">Contact</a>
-                </li>
+<!--                <li class="nav-item">-->
+<!--                  <a class="nav-link" href="/contact">Contact</a>-->
+<!--                </li>-->
                 <li class="nav-item">
                   <a class="nav-link" href="/code">Code</a>
                 </li>
@@ -41,13 +40,13 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                      aria-expanded="false">
-                    Dropdown
+                    Other
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Ask A Question</a></li>
                     <li><a class="dropdown-item" href="#">Business</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else tbd</a></li>
+                    <li><a class="dropdown-item" href="/contact">Contact</a></li>
                   </ul>
                 </li>
               </ul>
@@ -64,6 +63,33 @@
     {% endblock %}
 
     {% block footer %}
+        <div class="row row-cols-3 justify-content-md-center pt-3 pb-2 bg-primary-subtle">
+            <div class="col-md-3 txt-cntr">
+                <ul class="list-group">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">
+                        <a href="/contact" class="ftr-fnt">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="list-group-item"></li>
+                </ul>
+            </div>
+            <div class="col-sm-1">
+                <img src="{{ url_for('static', path='images/porg.png') }}" style="width: 5em;"/>
+            </div>
+            <div class="col-md-3 txt-cntr">
+                <ul class="list-group">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">
+                        <a href="#" class="ftr-fnt">
+                            Business
+                        </a>
+                    </li>
+                    <li class="list-group-item"></li>
+                </ul>
+            </div>
+        </div>
     {% endblock %}
 
     {% block scripts %}
@@ -74,5 +100,8 @@
 
         <!-- User Defined Scripts -->
         <script type="text/javascript" src="{{ url_for('static', path='js/common.js') }}"></script>
+    {% endblock %}
+
+    {% block modals %}
     {% endblock %}
 </html>

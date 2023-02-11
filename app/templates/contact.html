@@ -4,17 +4,13 @@
     {{ super() }}
 {% endblock %}
 
-{% block header %}
-    {{ super() }}
-{% endblock %}
-
 {% block navbar %}
     {{ super() }}
 {% endblock %}
 
 {% block body %}
     {{ super() }}
-    <div class="container-lg pt-3">
+    <div class="container-lg pt-3 pb-3 bkgd">
         <h2 class="txt-cntr">Contact Page</h2>
         <div class="container-md">
             <div class="row p-2">
@@ -29,32 +25,40 @@
                 <p>
                     Two Parts to my business:
                 </p>
-                <ul>
-                    <li>
+                <ul class="list-group">
+                    <li class="list-group-item">
                         First and foremost, I'm here to help!
-                        <ul>
-                            <li>
+                        <ul class="list-group-flush pt-2 pb-2">
+                            <li class="list-group-item">
                                 I want to make myself available, so if you have questions please reach out.
                                 Seriously with anything Physics, Technology, or Philosophically related.
                                 I would love to have a rational debate about topics. We can even start Reddit
                                 or posted threads! But please, we're here to have quality conversations.
                                 People don't inherently wake up evil and want to ruin others' days.
                             </li>
-                            <li>
+                            <li class="list-group-item">
                                 Have a thought/question? Reach out under navigation Dropdown -> Ask A Question,
                                 and we can always have a great conversation!
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="list-group-item">
                         Second, I am available for work. Sure chatbots are great, and they'll give you
                         general output, but does that solution fit your needs? Sometimes sure! For building
                         frameworks, absolutely...why type same thing a thousand times!? Ludicrous haha
-                        <ul>
-                            <li>I do software development as my primary role.</li>
-                            <li>I also have a Physics background, so are you looking to do research?! Let's colab</li>
-                            <li>How bout building a website? Like this one :)</li>
-                            <li>General work, such as Farm Hand, Mechanic, other...who knows!</li>
+                        <ul class="list-group-flush pt-2 pb-2">
+                            <li class="list-group-item">
+                                I do software development as my primary role.
+                            </li>
+                            <li class="list-group-item">
+                                I also have a Physics background, so are you looking to do research?! Let's colab
+                            </li>
+                            <li class="list-group-item">
+                                How bout building a website? Like this one :)
+                            </li>
+                            <li class="list-group-item">
+                                General work, such as Farm Hand, Mechanic, other...who knows!
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -78,5 +82,9 @@
 {% endblock %}
 
 {% block scripts %}
+    {{ super() }}
+{% endblock %}
+
+{% block modals %}
     {{ super() }}
 {% endblock %}

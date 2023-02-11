@@ -1,3 +1,20 @@
 .txt-cntr {
     text-align: center;
 }
+
+.bkgd {
+    background: #F0F0E9;
+}
+
+.ftr-fnt {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+body {
+    font-family: sans-serif;
+    letter-spacing: 0.02em;
+}

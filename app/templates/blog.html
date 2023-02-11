@@ -4,17 +4,13 @@
     {{ super() }}
 {% endblock %}
 
-{% block header %}
-    {{ super() }}
-{% endblock %}
-
 {% block navbar %}
     {{ super() }}
 {% endblock %}
 
 {% block body %}
     {{ super() }}
-    <div class="container-lg pt-3">
+    <div class="container-lg pt-3 pb-3 bkgd">
         <h2 class="txt-cntr">Blog Page</h2>
         <hr class="border border-primary border-3 opacity-75">
         <article>
@@ -72,5 +68,9 @@
 {% endblock %}
 
 {% block scripts %}
+    {{ super() }}
+{% endblock %}
+
+{% block modals %}
     {{ super() }}
 {% endblock %}
