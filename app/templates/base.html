@@ -13,7 +13,7 @@
     {% endblock %}
 
     {% block navbar %}
-        <nav class="navbar navbar-expand-lg bg-primary-subtle sticky-top">
+        <nav class="navbar navbar-expand-lg bg-info sticky-top">
           <div class="container-fluid">
             <div class="ps-1 pe-3">
               <i class="fa fa-thin fa-bolt fa-2x"></i>
@@ -25,30 +25,36 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                <li class="nav-item me-2">
+                  <a class="nav-link active" aria-current="page" href="/home">TJNF</a>
                 </li>
-<!--                <li class="nav-item">-->
-<!--                  <a class="nav-link" href="/contact">Contact</a>-->
-<!--                </li>-->
-                <li class="nav-item">
+                <li class="nav-item me-2">
                   <a class="nav-link" href="/code">Code</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-2">
                   <a class="nav-link" href="/blog">Blog</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                     aria-expanded="false">
-                    Other
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Ask A Question</a></li>
-                    <li><a class="dropdown-item" href="#">Business</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="/contact">Contact</a></li>
-                  </ul>
+                <li class="nav-item me-2">
+                  <a class="nav-link" href="/business">Business</a>
                 </li>
+                <li class="nav-item me-2">
+                  <a class="nav-link" href="/askaquestion">Ask A Question</a>
+                </li>
+                <li class="nav-item me-2">
+                  <a class="nav-link" href="/contact">Contact</a>
+                </li>
+<!--                <li class="nav-item dropdown">-->
+<!--                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"-->
+<!--                     aria-expanded="false">-->
+<!--                    Other-->
+<!--                  </a>-->
+<!--                  <ul class="dropdown-menu">-->
+<!--                    <li><a class="dropdown-item" href="#">Ask A Question</a></li>-->
+<!--                    <li><a class="dropdown-item" href="#">Business</a></li>-->
+<!--                    <li><hr class="dropdown-divider"></li>-->
+<!--                    <li><a class="dropdown-item" href="/contact">Contact</a></li>-->
+<!--                  </ul>-->
+<!--                </li>-->
               </ul>
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Feature Being Built" aria-label="Search">
@@ -63,7 +69,7 @@
     {% endblock %}
 
     {% block footer %}
-        <div class="row row-cols-3 justify-content-md-center pt-3 pb-2 bg-primary-subtle">
+        <div class="row row-cols-3 justify-content-md-center pt-3 pb-2 bg-info">
             <div class="col-md-3 txt-cntr">
                 <ul class="list-group">
                     <li class="list-group-item"></li>

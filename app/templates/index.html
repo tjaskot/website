@@ -10,43 +10,141 @@
 
 {% block body %}
     {{ super() }}
-    <div class="container-lg pt-3 pb-3 bkgd">
-        <h2 class="txt-cntr">TNFJ (TJ 'N Friends)</h2>
+    <div class="row pt-3 pb-3 index-parallax-header parallax-top">
+        <h1 class="txt-cntr txt-white pt-2">TNFJ (TJ 'N Friends)</h1>
+        <h5 class="fst-italic text-center txt-white">
+            Pain gives us balance. Life gives us passion - Trevor Jaskot
+        </h5>
+    </div>
+    <div class="container-lg pt-3 pb-2 bkgd">
         <hr class="border border-primary border-3 opacity-75">
-        <div class="container-md">
-            <div class="row row-cols-4 g-2">
+        <div class="container-md p-2">
+            <div class="row row-cols-2 g-2">
                 <div class="col">
-                    <div class="card">
-                        <a href="#" class="btn btn-info">
-                            <img src="{{ url_for('static', path='images/r2d2.png') }}" class="card-img-top" alt="">
-                        </a>
+                    <div class="card text-center">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <a href="#" class="btn btn-secondary btn-index" data-bs-toggle="modal"
+                                   data-bs-target="#coderModal">
+                                    <img src="{{ url_for('static', path='images/r2d2.png') }}"
+                                         class="card-img-top" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-body">
+                                    <p class="card-title">
+                                        CODER
+                                    </p>
+                                    <p class="card-text">
+                                        Coding experience and references available to developers.
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                                            data-bs-target="#coderModal">
+                                        Learn More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <a href="#" class="btn btn-success">
-                            <img src="{{ url_for('static', path='images/c3po.png') }}" class="card-img-top" alt="">
-                        </a>
+                    <div class="card text-center">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <a href="#" class="btn btn-secondary" data-bs-toggle="modal"
+                                   data-bs-target="#physicistModal">
+                                    <img src="{{ url_for('static', path='images/c3po.png') }}"
+                                         class="card-img-top" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-body">
+                                    <p class="card-title">
+                                        PHYSICIST
+                                    </p>
+                                    <p class="card-text">
+                                        Past Physics knowledge, books, resources, and other Physics references.
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                                            data-bs-target="#physicistModal">
+                                        Learn More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <a href="#" class="btn btn-secondary">
-                            <img src="{{ url_for('static', path='images/bb8.png') }}" class="card-img-top" alt="">
-                        </a>
+                    <div class="card text-center">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <div class="card-body">
+                                    <p class="card-title">
+                                        DIGITAL
+                                    </p>
+                                    <p class="card-text">
+                                        Digital innovation space and some links to transformative and
+                                        culture changing technology.
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                                            data-bs-target="#digitalModal">
+                                        Learn More
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <a href="#" class="btn btn-secondary" data-bs-toggle="modal"
+                                   data-bs-target="#digitalModal">
+                                    <img src="{{ url_for('static', path='images/bb8.png') }}"
+                                         class="card-img-top" alt="">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <a href="#" class="btn btn-dark">
-                            <img src="{{ url_for('static', path='images/d-o.png') }}" class="card-img-top" alt="">
-                        </a>
+                    <div class="card text-center">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <div class="card-body">
+                                    <p class="card-title">
+                                        WHO AM I
+                                    </p>
+                                    <p class="card-text">
+                                        Who is TJ and a quick summary of how he describes himself!
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                                            data-bs-target="#whoamiModal">
+                                        Learn More
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <a href="#" class="btn btn-secondary" data-bs-toggle="modal"
+                                   data-bs-target="#whoamiModal">
+                                    <img src="{{ url_for('static', path='images/d-o.png') }}"
+                                         class="card-img-top" alt="">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <hr class="border border-primary border-3 opacity-75">
-        <div class="container-md">
+    </div>
+    <div class="row index-parallax parallax-center"></div>
+    <div class="container-lg pt-3 pb-2 bkgd">
+        <hr class="border border-primary border-3 opacity-75">
+        <div class="container-md p-2">
             <p>
                 Quick Overview: TNFJ is for purpose of building community
                 development and sharing best practices across our current ecosystem. As the owner,
@@ -75,7 +173,11 @@
             </p>
         </div>
         <hr class="border border-primary border-3 opacity-75">
-        <div class="container-md">
+    </div>
+    <div class="row index-parallax parallax-center"></div>
+    <div class="container-lg pt-3 pb-2 bkgd">
+        <hr class="border border-primary border-3 opacity-75">
+        <div class="container-md p-2">
             <p>
                 So!!! What is the purpose of this site? Great question!
             </p>
@@ -96,12 +198,17 @@
             </p>
         </div>
         <hr class="border border-primary border-3 opacity-75">
-        <div class="container-md">
+    </div>
+    <div class="row index-parallax parallax-center"></div>
+    <div class="container-lg pt-3 pb-2 bkgd">
+        <hr class="border border-primary border-3 opacity-75">
+        <div class="container-md p-2">
             <p>
                 Want to know more about Trevor's Philosophy and business practices? Refer to the pinned
-                <a href="/blog">blog</a> at top of page.
+                <a href="/blog#blog0">blog</a> at top of page.
             </p>
         </div>
+        <hr class="border border-primary border-3 opacity-75">
     </div>
 {% endblock %}
 
@@ -115,5 +222,165 @@
 
 {% block modals %}
     {{ super() }}
-
+    <div class="modal" id="coderModal" tabindex="-1" aria-labelledby="coderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="coderModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="physicistModal" tabindex="-1" aria-labelledby="physicistModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="physicistModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="digitalModal" tabindex="-1" aria-labelledby="digitalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="digitalModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="whoamiModal" tabindex="-1" aria-labelledby="whoamiModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="whoamiModalLabel">Who Am I?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Who Am I? I’m John Vel John! No just kidding, but Les Miserables is a classic.
+                    </p>
+                    <p>
+                        I’m writing this as I’m talking to you. Rather you get to know me, instead of reading about
+                        some entity existing in parallel to you. So I will include joking and emotions as though I
+                        were with you in person!
+                    </p>
+                    <p>
+                        Hi I’m TJ. I’m a Physicist by birth. Here’s why I say that, and here’s my story. I always
+                        thought I would be a computer engineer and build the next generation of gaming. The first
+                        time I was told that I built to be a Physicist was my high school Physics professor. I
+                        had long conversations with her as well as my government teacher in high school about my
+                        future and how I would develop. I partially resented any comments opposing mine (to which
+                        I now regret as quite juvenile). My family acknowledged that physics is the subject where
+                        my mind truly flourish. It wasn’t but a year and half into college that it hit me like
+                        a ton of books (literally 😊) that I realized I was meant to be a Physicist. I was
+                        sitting in the Central Library on Campus around 1:30 studying for my Physics class. I
+                        heard the janitors start vacuuming the halls. It was intriguing to me that the janitors
+                        would start cleaning so early given the fact that I had started my Physics homework
+                        roughly 2 hours ago…or so I thought. The janitors clean the last 30 minutes prior to
+                        closing. I picked up my phone just out of curiosity to see what time it was and oh my
+                        goodness, it was 1:30 in the morning! I started my homework nearly 7 hours ago. I knew
+                        then that I needed to select Physics as my degree instead of engineering. I learned that
+                        I love Physics not because I could do it well, nor that I could do the math in my brain,
+                        but because I could lose all my physical being and enter a world where time didn’t exist.
+                    </p>
+                    <p>
+                        Some background as to why that matters and why it defines me as me. I have accommodative
+                        insufficiency and optical acuity issues. Acuity problems cause me to not be able to see
+                        clear. Accommodative insufficiency cause my eyes to not focus properly, nor can my eyes
+                        focus at the same rate. Hence, when I do read, I get headaches only a few short minutes
+                        into the book because each word, not matter how minute of a distance, triggers a focal
+                        change in the eye. What I didn’t know then, that I know now, is that my brain trained
+                        itself to immediately sponge information from my remaining senses. If I had to ever learn
+                        that bit of information again, I might encounter a scenario where I was in a state of
+                        pain. So what did my body do in response? Learn once, learn right.
+                    </p>
+                    <p>
+                        I know the next phrase not to be 100% true because I’m quite hyper-analytical so I
+                        recall details (to the point where literal interpretation is my vocabulary), but people
+                        say I have a photographic memory. I respond with: “No, I’m just a Physicist.” Why might
+                        you ask would I respond with that? Well Physics taught me one of life’s greatest lessons.
+                        Learn from your brain, and lead with your heart. What does that have to do with Physics
+                        you say? Please oblige me explanation with show and tell.
+                    </p>
+                    <p>
+                        Nothing explains me better than the Physics that taught me who I am. Unedited, snapshot
+                        which will transition and tailor itself to the world in which it is exposed with finesse
+                        and suave.
+                    </p>
+                    <p>
+                        I’m nothing more, and nothing less, than a Physics problem. This problem in Chapter 12
+                        of my Electromagnetic Theory (E&M) book describes my to a T (pun intended). Parallel
+                        plate capacitors have long been studied under the electromagnetic realm and will forever
+                        be a basis of theoretical principles. This first image describes the transformation
+                        that I experienced.
+                    </p>
+                    <p>
+                        I started from a point source observed from an external point of view and as time
+                        became more and more part of my spatial awareness, I became more and more independent.
+                        Given the number of occurrences for which my field encountered I too had a particular
+                        application in that set.
+                    </p>
+                    <p>
+                        Part 2 of my journey. As I learned to take one electric force (my electric force) and
+                        expand my perspective, I began to blossom.
+                    </p>
+                    <p>
+                        After some analysis and algorithm development I learned that the world in which we
+                        live is all about perspective. And given a parallel plate capacitor, from a point
+                        source’s perspective, is theoretically infinite, but from an external viewpoint it’s
+                        limited. So what else does the world have to offer? I want to learn.
+                    </p>
+                    <p>
+                        Hence, part 3. The design of a parallel plate capacitor.
+                    </p>
+                    <p>
+                        You see an image, I see an image. You think one thing, I think another. From what
+                        perspective are you observing? That’s life. That’s Physics. That’s me. I learned
+                        that having a collective problem, realizing the scenario, and solution an outcome
+                        constructs foundations of human nature. This given law describes words which have
+                        built my foundation and drive my future: harmony, integrity, energy. Without good
+                        there is not bad. Without failure, there is no success. Without a problem, there
+                        is no solution.
+                    </p>
+                    <p>
+                        I am a Physicist, yes. I am also TJ. I love being me and I hope together we can bring thoughts and
+                        perspective to the table which I hope to offer to the best of my ability and learn everything I can
+                        in order to continually expand my perspective and understanding and grow to become the person who I
+                        was designed to be.
+                    </p>
+                    <p>
+                        Physics opened my eyes; perspective is everything.
+                    </p>
+                    <p>
+                        Pain gave me balance. Life gave me passion.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

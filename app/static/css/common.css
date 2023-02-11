@@ -1,20 +1,117 @@
+/*    Tag's     */
+/* ******************* */
+body {
+    font-family: cursive;
+    letter-spacing: 0.02em;
+}
+/* ******************* */
+
+/*    ID's     */
+/* ******************* */
+#id-template{
+
+}
+/* ******************* */
+
+/*    Classes     */
+/* ******************* */
 .txt-cntr {
     text-align: center;
 }
 
+.txt-white {
+    color: white;
+}
+
 .bkgd {
-    background: #F0F0E9;
+    /* background: #F0F0E9; */
+    background: white;
+}
+
+.carousel-bkgd {
+    background-color: black;
 }
 
 .ftr-fnt {
-    font-family: sans-serif;
+    font-family: cursive;
     text-decoration: none;
     color: black;
     letter-spacing: 0.02em;
     text-transform: uppercase;
 }
 
-body {
-    font-family: sans-serif;
-    letter-spacing: 0.02em;
+.index-parallax {
+    /* The image used */
+    background-image: url("../images/atoms_universe.jpg");
+    /* Set a specific height */
+    min-height: 7rem;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-size: 100%;
 }
+
+.index-parallax-header {
+    /* The image used */
+    background-image: url("../images/atoms_universe_crop.jpg");
+    /* Set a specific height */
+    min-height: 10rem;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.contact-parallax {
+    /* The image used */
+    background-image: url("../images/contact-us.jpg");
+    /* Set a specific height */
+    min-height: 7rem;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.contact-parallax.contact-parallax-header.parallax-top {
+    background-size: 35%;
+}
+
+.contact-parallax.parallax-center {
+    background-size: 100%;
+}
+
+.blog-parallax{
+    /* The image used */
+    background-image: url("../images/blog_travel.jpg");
+    /* Set a specific height */
+    min-height: 7rem;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.blog-parallax.parallax-center {
+    background-size: 100%;
+}
+
+.code-parallax{
+    /* The image used */
+    background-image: url("../images/code.jpg");
+    /* Set a specific height */
+    min-height: 7rem;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.code-parallax.parallax-center {
+    background-size: 100%;
+}
+
+.parallax-top {
+    background-position: top;
+}
+
+.parallax-center {
+    background-position: center;
+}
+/* ******************* */
