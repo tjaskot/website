@@ -26,10 +26,12 @@
                             aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselCode" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselCode" data-bs-slide-to="2" class="active"
+                            aria-current="true" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="{{ url_for('static', path='images/github.png') }}" class="d-block w-25">
+                        <img src="{{ url_for('static', path='images/github_250px.png') }}" class="d-block w-25">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>GitHub</h5>
                             <p>Link to TJ's Personal GitHub account with all current active projects.</p>
@@ -39,7 +41,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ url_for('static', path='images/linkedin.png') }}" class="d-block w-25">
+                        <img src="{{ url_for('static', path='images/linkedin_250px.png') }}" class="d-block w-25">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>LinkedIn</h5>
                             <p>
@@ -49,6 +51,22 @@
                             <a href="https://www.linkedin.com/in/trevor-jaskot-72597a204/" rel="noreferrer noopener"
                                 target="_blank">
                                 LinkedIn Profile
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', path='images/docker_250px.png') }}" class="d-block w-25">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Docker Hub</h5>
+                            <p>
+                                TJ's docker hub for containerized applications. There are other methods of CI/CD
+                                which I leverage for containers (Gitlab, Travis CI, Jenkins, ECR, and Heroku CI),
+                                but for public apps, I use docker.
+                            </p>
+                            <a href="https://hub.docker.com/repository/docker/tjaskot/website/general"
+                               rel="noreferrer noopener"
+                                target="_blank">
+                                Docker Hub - Website
                             </a>
                         </div>
                     </div>
