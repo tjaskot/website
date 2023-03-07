@@ -1,9 +1,13 @@
 .idea
 secret.txt
 venv
-
 .vercel
-
 node_modules
-
-
+secrets.txt
+creds.txt
+credentials.txt
+secrets
+creds
+secret
+cred
+__pycache__
