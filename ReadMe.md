@@ -14,3 +14,7 @@
 ## Endpoints
 
 Refer to website docs for API endpoints
+
+## Run uvicorn locally
+
+uvicorn app.main:app --reload

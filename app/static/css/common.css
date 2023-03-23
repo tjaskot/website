@@ -61,22 +61,15 @@ body {
     background-repeat: no-repeat;
 }
 
-.contact-parallax {
+.aaq-parallax{
     /* The image used */
-    background-image: url("../images/contact-us.jpg");
+    background-image: url("../images/askaquestion.png");
     /* Set a specific height */
     min-height: 7rem;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-repeat: no-repeat;
-}
-
-.contact-parallax.contact-parallax-header.parallax-top {
-    background-size: 35%;
-}
-
-.contact-parallax.parallax-center {
-    background-size: 100%;
+    background-size: 50%;
 }
 
 .blog-parallax{
@@ -87,10 +80,18 @@ body {
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-repeat: no-repeat;
+    /*background-size: 100%;*/
 }
 
-.blog-parallax.parallax-center {
-    background-size: 100%;
+.business-parallax{
+    /* The image used */
+    background-image: url("../images/LLC.png");
+    /* Set a specific height */
+    min-height: 7rem;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 50%;
 }
 
 .code-parallax{
@@ -107,11 +108,38 @@ body {
     background-size: 100%;
 }
 
+.contact-parallax {
+    /* The image used */
+    background-image: url("../images/contact-us.jpg");
+    /* Set a specific height */
+    min-height: 7rem;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.contact-parallax.contact-parallax-header.parallax-top-right {
+    background-size: 35%;
+    background-position: top right;
+}
+
+.contact-parallax {
+    background-size: 100%;
+}
+
 .parallax-top {
     background-position: top;
 }
 
 .parallax-center {
     background-position: center;
+}
+
+.parallax-bottom {
+    background-position: bottom;
+}
+
+.parallax-top-right {
+    background-position: top right;
 }
 /* ******************* */
