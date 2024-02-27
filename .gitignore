@@ -11,3 +11,4 @@ creds
 secret
 cred
 __pycache__
+*/__pycache__
