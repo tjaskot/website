@@ -12,3 +12,4 @@ secret
 cred
 __pycache__
 */__pycache__
+app/__pycache__
